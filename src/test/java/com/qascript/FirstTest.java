@@ -17,9 +17,9 @@ public class FirstTest {
       //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
      //   ChromeOptions options = new ChromeOptions();
       //  options.addArguments("disable-gpu");
-       ChromeOptions chromeOptions = new ChromeOptions();
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver(chromeOptions);
+      // ChromeOptions chromeOptions = new ChromeOptions();
+      WebDriverManager.firefoxdriver().setup();
+    WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
