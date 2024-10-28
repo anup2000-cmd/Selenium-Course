@@ -11,6 +11,7 @@ public class FirstTest {
 
     @Test
     public void OpenBrowser()  {
+        System.out.println("Hiiiii-----");
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
