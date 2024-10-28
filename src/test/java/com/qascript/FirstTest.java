@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirstTest {
 
@@ -17,7 +17,9 @@ public class FirstTest {
       //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
      //   ChromeOptions options = new ChromeOptions();
       //  options.addArguments("disable-gpu");
-       WebDriver driver = new FirefoxDriver();
+       ChromeOptions chromeOptions = new ChromeOptions();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.google.com");
         System.out.println("Title of the page is: " + driver.getTitle());
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
